@@ -5,7 +5,9 @@ exports.up = function (knex, Promise) {
         table.string('lastName');
         table.string('email');
         table.string('password');
-    })
+        table.boolean('verified');
+        table.string('tempToken');
+    });
 };
 
 exports.down = function (knex, Promise) {
