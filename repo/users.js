@@ -12,7 +12,6 @@ async function createUser(user) {
 }
 
 async function verifyUser(tempToken) {
-    console.log(tempToken);
     let user = await knex('users').where({ tempToken: tempToken }).first();
     if (user) {
         user.verified = true;
